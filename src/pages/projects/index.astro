@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets'
+
+import { Button, Collapse, Icon } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+import Sponsors from '@/components/projects/Sponsors.astro'
+import Sponsorship from '@/components/projects/Sponsorship.astro'
+import alipay from '@/assets/alipay-qrcode.jpg'
+import KeyIcon from '@/assets/icons/key.svg'
+import wechat from '@/assets/wechat-qrcode.jpg'
+
+const headings = [
+  { depth: 2, slug: 'programs', text: 'Programs' },
+  { depth: 2, slug: 'learnings', text: 'Learnings' },
+  { depth: 2, slug: 'others', text: 'Others' },
+  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+]
+---
+
+<PageLayout title='Projects' {headings} view>
+  <p>Github Activities:</p>
+  <p>
+    <Image
+      src='https://ghchart.rshah.org/659eb9/tkozek'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
+  </p>
+
+  <h2 id='programs'>Projects</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: '',
+        description: 'Filler',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
+          { type: 'site', href: 'https://astro-pure.js.org/' },
+          { type: 'doc', href: 'https://astro-pure.js.org/docs/list' },
+          { type: 'release', href: 'https://www.npmjs.com/package/astro-pure' }
+        ]
+      },
+      {
+        name: 'Filler',
+        description: 'A script to beautify pku course website',
+        links: [
+          { type: 'github', href: 'https://github.com/tkozek' },
+          { type: 'site', href: 'https://github.com/tkozek' },
+          { type: 'doc', href: '' }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='More'>
+    <ProjectSection
+      projects={[
+        {
+          name: 'rehype-autolink-headings-simple',
+          description: 'A simple version of rehype-autolink-headings',
+          links: [
+            { type: 'github', href: 'https://github.com/tkozek' },
+            {
+              type: 'release',
+              href: 'https://www.npmjs.com/package/rehype-autolink-headings-simple'
+            }
+          ]
+        },
+        {
+          name: 'Filler',
+          description:
+            'Filler',
+          links: [{ type: 'github', href: 'https://github.com/tkozek' }]
+        }
+      ]}
+    />
+  </Collapse>
+
+  <h2 id='learnings'>Readings</h2>
+  <ProjectSection
+    class='my-2'
+    projects={[
+      {
+        name: 'Filler',
+        description: 'Filler',
+        links: [
+          { type: 'github', href: 'https://github.com/tkozek' },
+          { type: 'site', href: 'https://tkozek.github.io/' }
+        ]
+      },
+      {
+        name: 'Filler',
+        description: 'Filler',
+        links: [
+          {
+            type: 'github',
+            href: 'https://github.com/tkozek'
+          }
+        ]
+      }
+    ]}
+  />
+
+  <h2 id='others'>Others</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: 'Filler',
+        description: "Filler",
+        links: [{ type: 'github', href: 'https://github.com/tkozek' }]
+      },
+      {
+        name: 'Arthals',
+        description: 'Arthals Github',
+        links: [{ type: 'github', href: 'https://github.com/tkozek' }]
+      }
+    ]}
+  />
+</PageLayout>
+
+<style>
+  .sponsorship-card {
+    & .sponsorship-card-img {
+      opacity: 0.3;
+      --un-blur: blur(4px);
+      filter: var(--un-blur);
+    }
+
+    &:hover {
+      & .sponsorship-card-icon {
+        opacity: 0;
+      }
+      & .sponsorship-card-img {
+        opacity: 1;
+        --un-blur: blur(0);
+      }
+    }
+  }
+</style>
