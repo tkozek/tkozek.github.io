@@ -33,15 +33,31 @@ linkedin.com/in/tkozek/</a>
 
 </header><hr>
 <body style="padding: 0 20px; overflow-y: scroll;">
-	<p><h3>About</h3>I am a 4th year Computer Science (BCS) student studying at the University of British Columbia. Currently seeking co-ops/internships beginning in May 2026 (or sooner), primarily interested in backend roles. In my spare time I enjoy reading, powerlifting, and attending UBC ICPC's practices (free pizza!).</p>
+	<p><h3>About</h3>I am a 4th year Computer Science (BCS) student studying at the University of British Columbia. Currently seeking co-ops/internships beginning in May 2026, primarily interested in backend roles. 
+        In my spare time I enjoy reading, powerlifting, and attending UBC ICPC's practices (free pizza!).</p>
+
 <hr><h3>Projects</h3><ul>
+    <li><b>Ahead-of-time Compiler</b> | <i>Racket, x86-64</i><br>
+        Written in Racket, this compiler translates a subset of Racket into x86-64 Linux. Its pipeline includes over 20 passes, 
+        from instruction selection to calling conventions and register allocation. 
+        I also designed code generators that produce well-typed programs for the source language and pipelined these through all intermediate passes, verifying correctness at every stage
+        <br><br></li>
 	<li><b>PrairieTest Exam Autobooker</b> | <i>Selenium, GCP, Docker, Python, GitHub Actions</i><br>
-UBC has been transitioning to hosting exams for many core Computer Science courses via PrairieLearn in their Computer-Based Testing Facility. I wrote a script using Selenium with Python to automate my exam bookings for this platform. I containerized it with Docker, deployed on GCP, and interfaced with the Google Calendar API to prevent booking conflicts when possible.</details><br><br></li>
-<li><b>Image Compressor</b> | <i>C++, GDB, CMake, Valgrind</i><br>
-Built using hex trees in C++. Can be lossless or lossy, depending on the user inputs. Supported image manipulations such as flipping, copying, and greyscale.<br><br></li>
-<li><b>Crossword Game</b> -- <a href="https://github.com/tkozek/crossword-game" target="_blank" rel="noopener noreferrer">GitHub Repo</a> | <i>Java, Swing</i><br>
+        UBC has been transitioning to hosting exams for many core Computer Science courses via PrairieLearn in their Computer-Based Testing Facility. 
+        I wrote a script using Selenium with Python to automate my exam bookings for this platform. I containerized it with Docker, deployed on GCP, and interfaced 
+        with the Google Calendar API to prevent booking conflicts when possible.<br><br>
+    </li>
+    <li><b>Simplified TCP Server</b> | <i>C, Bash, GDB, CMake</i><br>
+        Written in C, the server supports reliable delivery, fast retransmission, flow control, and error detection. Used the POSIX Sockets API to manage network communication across multiple ports.<br>
+    </li>
+
+<!-- <li><b>Image Compressor</b> | <i>C++, GDB, CMake, Valgrind</i><br>
+Built using hex trees in C++. Can be lossless or lossy, depending on the user inputs. Supported image manipulations such as flipping, copying, and greyscale.<br><br></li> -->
+
+<!-- <li><b>Crossword Game</b> -- <a href="https://github.com/tkozek/crossword-game" target="_blank" rel="noopener noreferrer">GitHub Repo</a> | <i>Java, Swing</i><br>
 A Scrabble game written in Java, created both terminal and graphical user interfaces. Supported save, load, and various types of in-game queries with a user-friendly design. Images and instructions available in README.<br> 
-</li>
+</li> -->
+
 </ul><hr>
 <details open><summary class="summary-h4">Books I'm currently reading: </summary><ul>
 	<li><i>Operating Systems: Three Easy Pieces</i>	by Remzi and Andrea Arpaci-Dusseau</li>
